@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
+
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -24,6 +26,7 @@ const APP_PROVIDERS = [
   GlobalState
 ];
 
+
 export type StoreType = {
   state: InternalStateType,
   restoreInputValues: () => void,
@@ -36,7 +39,7 @@ export type StoreType = {
 @NgModule({
   bootstrap: [App],
   declarations: [
-    App
+    App,
   ],
   imports: [ // import Angular's modules
     BrowserModule,

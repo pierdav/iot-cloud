@@ -3,6 +3,36 @@ export const PAGES_MENU = [
     path: 'pages',
     children: [
       {
+        path: 'formlies',
+        data: {
+          menu: {
+            title: 'general.menu.formlies',
+            icon: 'ion-android-home',
+            selected: false,
+            expanded: false,
+            order: 0
+          }
+        },
+		children: [
+          {
+            path: 'formliestabs',
+            data: {
+              menu: {
+                title: 'general.menu.ck_editor',
+              }
+            }
+          },
+		  {
+            path: 'formliesfull',
+            data: {
+              menu: {
+                title: 'general.menu.ck_editor',
+              }
+            }
+          }
+        ]
+      },
+	  {
         path: 'dashboard',
         data: {
           menu: {
