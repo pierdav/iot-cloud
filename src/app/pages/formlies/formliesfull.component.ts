@@ -7,13 +7,6 @@ import {FormlyModule, FormlyFieldConfig, FormlyBootstrapModule, Field, FieldWrap
 
 @Component({
   selector: 'formliesfull',
-  /*template: `
-    <form class="formly" role="form" novalidate [formGroup]="form" (ngSubmit)="submit(user)">
-        <formly-form [model]="user" [fields]="userFields">
-            <button type="submit" class="btn btn-default">Button</button>
-        </formly-form>
-    </form>
-  `,*/
   templateUrl: 'formlies.html',
 })
 export class FormliesFull {

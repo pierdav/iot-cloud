@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 
-import { BaMenuService } from '../theme';
-import { PAGES_MENU } from './pages.menu';
+import { BaMenuService } from '../../theme';
+import { COCKPIT_MENU } from './cockpit.menu';
 
 @Component({
-  selector: 'pages',
+  selector: 'cockpit',
   template: `
     <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>
@@ -31,7 +31,7 @@ import { PAGES_MENU } from './pages.menu';
     <ba-back-top position="200"></ba-back-top>
     `,
 })
-export class Pages {
+export class CockpitComponent {
 
   user: Object;
 
@@ -44,6 +44,6 @@ export class Pages {
   }
 
   ngOnInit() {
-    this._menuService.updateMenuByRoutes(<Routes>PAGES_MENU);
+    this._menuService.updateMenuByRoutes(<Routes>COCKPIT_MENU);
   }
 }

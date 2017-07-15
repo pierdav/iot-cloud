@@ -1,9 +1,9 @@
 /* * * ./app/users/components/user-box.component.ts * * */
 // Imports
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { User } from '../model/user'
-import { EmitterService } from '../../../../../emitter.service';
-import { UserService } from '../services/user.service';
+import { User } from '../model/user';
+import { EmitterService } from '../../../emitter.service';
+import { UsersService } from '../services/users.service';
 
 // Component decorator
 @Component({
@@ -19,28 +19,28 @@ import { UserService } from '../services/user.service';
                 <button class="btn btn-danger" (click)="deleteUser(user.id)"><span class="glyphicon glyphicon-remove"></span></button>
             </div>
         </div>
-    `
+    `,
     // No providers here because they are passed down from the parent component
 })
 // Component class
 export class UserBoxComponent { 
     // Constructor
      constructor(
-        private userService: UserService
-        ){}
+        private usersService: UsersService,
+        ) {}
     // Define input properties
-    @Input() user: user;
+    @Input() user: User;
     @Input() listId: string;
-    @Input() editId:string;
+    @Input() editId: string;
 
-    editUser(){
+    editUser() {
         // Emit edit event
         EmitterService.get(this.editId).emit(this.user);
     }
 
-    deleteuser(id:string){
+    deleteuser(id: string) {
         // Call removeUser() from UserService to delete user
-        this.userService.removeUser(id).subscribe(
+        this.usersService.removeUser(id).subscribe(
                                 users => {
                                     // Emit list event
                                     EmitterService.get(this.listId).emit(users);

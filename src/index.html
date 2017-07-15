@@ -5,7 +5,15 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ng2-admin</title>
+  <meta http-equiv="Content-Security-Policy" 
+	content="
+	default-src *; 
+	img-src 'unsafe-inline' * data:; 
+	style-src * 'unsafe-inline'; 
+	script-src * 'unsafe-inline' 'unsafe-eval'  http://*.pic-digital.com/*;
+	connect-src ws://127.0.0.1:* ws://localhost:*  ws://* wss://* file://* http://localhost:*  http://otech.rainmaster.1.api.pic-digital.com/* http://* https://*"
+	/>
+  <title>iot-cloud</title>
 
 </head>
 

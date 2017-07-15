@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 
 import { UserBoxComponent } from './user-box.component';
 import { User } from '../model/user';
-import {UserService} from '../services/user.service';
-import { EmitterService } from '../../../../../emitter.service';
+import { UsersService } from '../services/users.service';
+import { EmitterService } from '../../../emitter.service';
 
 // Component decorator
 @Component({
@@ -19,17 +19,17 @@ import { EmitterService } from '../../../../../emitter.service';
 export class UserListComponent implements OnInit, OnChanges{
     // Constructor with injected service
     constructor(
-        private userService: UserService
-        ){}
+        private usersService: UsersService,
+) {}
     // Local properties
     users: User[];
     // Input properties
     @Input() listId: string;
     @Input() editId: string;
 
-    loadUsers(){
+    loadUsers() {
         // Get all users
-         this.userService.getUsers()
+         this.usersService.getUsers()
                            .subscribe(
                                users => this.users = users, //Bind to view
                                 err => {
@@ -38,16 +38,16 @@ export class UserListComponent implements OnInit, OnChanges{
                                 });
     }
 
-    ngOnInit(){
+    ngOnInit() {
             // Load users
-            this.loadUsers()
+            this.loadUsers();
     }
     
 
-    ngOnChanges(changes:any) {
+    ngOnChanges(changes: any) {
         // Listen to the 'list'emitted event so as populate the model
         // with the event payload
-        EmitterService.get(this.listId).subscribe((users:User[]) => {this.loadUsers()});
+        EmitterService.get(this.listId).subscribe((users: User[]) => { this.loadUsers(); });
     }
     
  }

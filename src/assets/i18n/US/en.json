@@ -2,6 +2,7 @@
   "login": {
     "title": "Sign in to ng2-admin",
     "signup_link": "New to ng2-admin? Sign up!",
+    "username": "Username",
     "email": "Email",
     "password": "Password",
     "sign_in": "Sign in",
@@ -13,13 +14,26 @@
   },
   "general": {
     "akveo": "Akveo",
+    "pierdav": "Pierdav",
     "home": "Home",
     "forms": {
       "option1": "Option 1"
     },
     "menu": {
-      "formlies": "Formlies",
-	  "dashboard": "Dashboard",
+      "accounts": "Accounts",
+      "users": "Users",
+      "roles": "Roles",
+      "log": "Log",
+      "applications": "Applications",
+      "my_applications": "My applications",
+      "busines_srules": "Business rules",
+      "event_processing": "Event processing",
+      "alarm_mapping": "Alarm mapping",
+      "kpi": "KPI",
+      "settings": "Settings",
+      "properties": "Properties",
+	    "files": "Files",
+	    "dashboard": "Dashboard",
       "editors": "Editors",
       "ck_editor": "CKEditor",
       "components": "Components",
@@ -52,7 +66,8 @@
       "menu_level_1_2_1": "Menu Level 1.2.1",
       "external_link": "External Link"
     },
-    "created_with": "Created with"
+    "created_with": "Created with",
+    "powered_by": "Powered by Pierdav"
   },
   "dashboard": {
     "acquisition_channels": "Acquisition Channels",

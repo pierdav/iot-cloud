@@ -10,29 +10,11 @@ export const PAGES_MENU = [
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
-          }
-        },
-		children: [
-          {
-            path: 'formliestabs',
-            data: {
-              menu: {
-                title: 'general.menu.ck_editor',
-              }
-            }
+            order: 0,
           },
-		  {
-            path: 'formliesfull',
-            data: {
-              menu: {
-                title: 'general.menu.ck_editor',
-              }
-            }
-          }
-        ]
+        },
       },
-	  {
+      {
         path: 'dashboard',
         data: {
           menu: {
@@ -40,10 +22,142 @@ export const PAGES_MENU = [
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
-            order: 0
-          }
-        }
+            order: 0,
+          },
+        },
       },
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'general.menu.accounts',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700,
+          },
+        },
+        children: [
+          {
+            path: 'users',
+            data: {
+              menu: {
+                title: 'general.menu.users',
+  
+              },
+            },
+          },
+          {
+            path: 'roles',
+            data: {
+              menu: {
+                title: 'general.menu.roles',
+        
+              },
+            },
+          },
+          {
+            path: 'log',
+            data: {
+              menu: {
+                title: 'general.menu.log',
+             
+              },
+            },
+          },
+        ],
+      },
+
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'general.menu.applications',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700,
+          },
+        },
+        children: [
+          {
+            path: 'applications',
+            data: {
+              menu: {
+                title: 'general.menu.my_applications',
+  
+              },
+            },
+          },
+        ],
+      },
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'general.menu.busines_srules',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700,
+          },
+        },
+        children: [
+          {
+            path: 'eventprocessing',
+            data: {
+              menu: {
+                title: 'general.menu.event_processing',
+  
+              },
+            },
+          },
+          {
+            path: 'alarmmapping',
+            data: {
+              menu: {
+                title: 'general.menu.alarm_mapping',
+  
+              },
+            },
+          },
+          {
+            path: 'kpi',
+            data: {
+              menu: {
+                title: 'general.menu.kpi',
+  
+              },
+            },
+          },
+        ],
+      },
+
+      {
+        path: '',
+        data: {
+          menu: {
+            title: 'general.menu.settings',
+            icon: 'ion-ios-more',
+            selected: false,
+            expanded: false,
+            order: 700,
+          },
+        },
+        children: [
+          {
+            path: 'properties',
+            data: {
+              menu: {
+                title: 'general.menu.properties',
+  
+              },
+            },
+          },
+        ],
+      },
+      /*
+      
       {
         path: 'editors',
         data: {
@@ -53,7 +167,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 100,
-          }
+          },
         },
         children: [
           {
@@ -61,10 +175,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.ck_editor',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'components',
@@ -75,7 +189,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 250,
-          }
+          },
         },
         children: [
           {
@@ -83,10 +197,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.tree_view',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'charts',
@@ -97,7 +211,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 200,
-          }
+          },
         },
         children: [
           {
@@ -105,10 +219,10 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.chartist_js',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'ui',
@@ -119,7 +233,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 300,
-          }
+          },
         },
         children: [
           {
@@ -127,50 +241,50 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.typography',
-              }
-            }
+              },
+            },
           },
           {
             path: 'buttons',
             data: {
               menu: {
                 title: 'general.menu.buttons',
-              }
-            }
+              },
+            },
           },
           {
             path: 'icons',
             data: {
               menu: {
                 title: 'general.menu.icons',
-              }
-            }
+              },
+            },
           },
           {
             path: 'modals',
             data: {
               menu: {
                 title: 'general.menu.modals',
-              }
-            }
+              },
+            },
           },
           {
             path: 'slim',
             data: {
               menu: {
                 title: 'Slim loading bar',
-              }
-            }
+              },
+            },
           },
           {
             path: 'grid',
             data: {
               menu: {
                 title: 'general.menu.grid',
-              }
-            }
+              },
+            },
           },
-        ]
+        ],
       },
       {
         path: 'forms',
@@ -181,7 +295,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 400,
-          }
+          },
         },
         children: [
           {
@@ -189,18 +303,18 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.form_inputs',
-              }
-            }
+              },
+            },
           },
           {
             path: 'layouts',
             data: {
               menu: {
                 title: 'general.menu.form_layouts',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: 'tables',
@@ -211,7 +325,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 500,
-          }
+          },
         },
         children: [
           {
@@ -219,34 +333,34 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.basic_tables',
-              }
-            }
+              },
+            },
           },
           {
             path: 'smarttables',
             data: {
               menu: {
                 title: 'general.menu.smart_tables',
-              }
-            }
+              },
+            },
           },
           {
             path: 'datatables',
             data: {
               menu: {
                 title: 'Data Tables',
-              }
-            }
+              },
+            },
           },
            {
              path: 'hottables',
              data: {
                menu: {
                  title: 'Hot Tables',
-               }
-             }
-           }
-        ]
+               },
+             },
+           },
+        ],
       },
       {
         path: 'maps',
@@ -257,7 +371,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 600,
-          }
+          },
         },
         children: [
           {
@@ -265,34 +379,34 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.google_maps',
-              }
-            }
+              },
+            },
           },
           {
             path: 'leafletmaps',
             data: {
               menu: {
                 title: 'general.menu.leaflet_maps',
-              }
-            }
+              },
+            },
           },
           {
             path: 'bubblemaps',
             data: {
               menu: {
                 title: 'general.menu.bubble_maps',
-              }
-            }
+              },
+            },
           },
           {
             path: 'linemaps',
             data: {
               menu: {
                 title: 'general.menu.line_maps',
-              }
-            }
-          }
-        ]
+              },
+            },
+          },
+        ],
       },
       {
         path: '',
@@ -303,26 +417,26 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 650,
-          }
+          },
         },
         children: [
           {
             path: ['/login'],
             data: {
               menu: {
-                title: 'general.menu.login'
-              }
-            }
+                title: 'general.menu.login',
+              },
+            },
           },
           {
             path: ['/register'],
             data: {
               menu: {
-                title: 'general.menu.register'
-              }
-            }
-          }
-        ]
+                title: 'general.menu.register',
+              },
+            },
+          },
+        ],
       },
       {
         path: '',
@@ -333,7 +447,7 @@ export const PAGES_MENU = [
             selected: false,
             expanded: false,
             order: 700,
-          }
+          },
         },
         children: [
           {
@@ -341,17 +455,17 @@ export const PAGES_MENU = [
             data: {
               menu: {
                 title: 'general.menu.menu_level_1_1',
-                url: '#'
-              }
-            }
+                url: '#',
+              },
+            },
           },
           {
             path: '',
             data: {
               menu: {
                 title: 'general.menu.menu_level_1_2',
-                url: '#'
-              }
+                url: '#',
+              },
             },
             children: [
               {
@@ -359,13 +473,13 @@ export const PAGES_MENU = [
                 data: {
                   menu: {
                     title: 'general.menu.menu_level_1_2_1',
-                    url: '#'
-                  }
-                }
-              }
-            ]
-          }
-        ]
+                    url: '#',
+                  },
+                },
+              },
+            ],
+          },
+        ],
       },
       {
         path: '',
@@ -375,10 +489,11 @@ export const PAGES_MENU = [
             url: 'http://akveo.com',
             icon: 'ion-android-exit',
             order: 800,
-            target: '_blank'
-          }
-        }
-      }
-    ]
-  }
+            target: '_blank',
+          },
+        },
+      },
+      */
+    ],
+  },
 ];

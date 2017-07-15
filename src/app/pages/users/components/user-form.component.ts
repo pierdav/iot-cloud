@@ -1,13 +1,13 @@
 /* * * ./app/users/components/user-form.component.ts * * */
 // Imports
 import { Component, EventEmitter, Input, OnChanges } from '@angular/core';
-import { NgForm }    from '@angular/common';
-import {Observable} from 'rxjs/Rx';
+import { NgForm }    from '@angular/forms';
+import { Observable } from 'rxjs/Rx';
 
-import { UserBoxComponent } from './user-box.component'
-import { UserService } from '../services/user.service';
-import { EmitterService } from '../../../../../emitter.service';
-import { User } from '../model/user'
+// import { UserBoxComponent } from './user-box.component';
+import { UsersService } from '../services/users.service';
+import { EmitterService } from '../../../emitter.service';
+import { User } from '../model/user';
 
 // Component decorator
 @Component({
@@ -32,8 +32,8 @@ import { User } from '../model/user'
 export class UserFormComponent implements OnChanges { 
     // Constructor with injected service
     constructor(
-        private userService: UserService
-        ){}
+        private userService: UsersService,
+        ) {}
     // Local properties
     private model = new User(new Date(), '', '');
     private editing = false;
@@ -43,16 +43,16 @@ export class UserFormComponent implements OnChanges {
      @Input() listId: string;
      
 
-    submitUser(){
+    submitUser() {
         // Variable to hold a reference of addUser/updateUser
-        let userOperation:Observable<User[]>;
+        let userOperation: Observable<User[]>;
 
-        if(!this.editing){
+        if (!this.editing) {
             // Create a new user
-            userOperation = this.userService.addUser(this.model)
+            userOperation = this.userService.addUser(this.model);
         } else {
             // Update an existing user
-             userOperation = this.userService.updateUser(this.model)
+             userOperation = this.userService.updateUser(this.model);
         }
 
         // Subscribe to observable
@@ -63,7 +63,7 @@ export class UserFormComponent implements OnChanges {
                                     // Empty model
                                     this.model = new User(new Date(), '', '');
                                     // Switch editing status
-                                    if(this.editing) this.editing = !this.editing;
+                                    if (this.editing) this.editing = !this.editing;
                                 }, 
                                 err => {
                                     // Log errors if any
@@ -74,8 +74,8 @@ export class UserFormComponent implements OnChanges {
     ngOnChanges() {
         // Listen to the 'edit'emitted event so as populate the model
         // with the event payload
-        EmitterService.get(this.editId).subscribe((user:User) => {
-            this.model = user
+        EmitterService.get(this.editId).subscribe((user: User) => {
+            this.model = user;
             this.editing = true;
         });
     }

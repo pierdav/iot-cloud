@@ -1,0 +1,23 @@
+<div class="vertical-scroll">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="table-id">#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of users">
+      <td class="table-id">{{ item.id }}</td>
+      <td>{{ item.nom }}</td>
+      <td>{{ item.prenom }}</td>
+      <td>{{ item.login }}</td>
+      <td><a class="email-link" href="mailto:{{ item.email }}">{{ item.email }}</a></td>
+      
+    </tr>
+    </tbody>
+  </table>
+</div>
